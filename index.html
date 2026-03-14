@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chaos-to-plan</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Chaos-to-plan</h1>
+        <p>Smid dine løse noter ind, og få en brugbar plan på få sekunder.</p>
+      </header>
+
+      <section class="input-panel">
+        <label for="rawNotes">Løse noter</label>
+        <textarea
+          id="rawNotes"
+          placeholder="Eksempel: Vi skal lancere ny onboarding i Q3. Risiko: ingen designer. Næste skridt: book kickoff mandag."
+        ></textarea>
+        <div class="actions">
+          <button id="generateBtn" type="button">Strukturer noter</button>
+          <button id="clearBtn" type="button" class="secondary">Ryd</button>
+        </div>
+      </section>
+
+      <section class="output-grid" aria-live="polite">
+        <article>
+          <h2>Mål</h2>
+          <ul id="goals"></ul>
+        </article>
+        <article>
+          <h2>Leverancer</h2>
+          <ul id="deliverables"></ul>
+        </article>
+        <article>
+          <h2>Tidslinje</h2>
+          <ul id="timeline"></ul>
+        </article>
+        <article>
+          <h2>Risici</h2>
+          <ul id="risks"></ul>
+        </article>
+        <article>
+          <h2>Næste skridt</h2>
+          <ul id="nextSteps"></ul>
+        </article>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
